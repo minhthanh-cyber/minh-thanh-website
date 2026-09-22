@@ -767,7 +767,7 @@ export const phones: Phone[] = [
     id: "huawei-mate-80-pro",
     name: "Huawei Mate 80 Pro",
     brand: "Huawei",
-    price: "Đang cập nhật",
+    price: "22.990.000₫",
     image: "/images/other/huawei/huawei-phones-mate80-pro.png",
     specs: {
       manHinh: 'LTPO OLED 6.75" / 1-120Hz',
@@ -784,7 +784,7 @@ export const phones: Phone[] = [
     id: "huawei-pura-90s-pro-max",
     name: "Huawei Pura 90S Pro Max",
     brand: "Huawei",
-    price: "Đang cập nhật",
+    price: "24.990.000₫",
     image: "/images/other/huawei/pura90s-pro-max.png",
     specs: {
       manHinh: 'LTPO OLED 6.9" / 1-120Hz',
@@ -801,7 +801,7 @@ export const phones: Phone[] = [
     id: "huawei-pura-90s-pro",
     name: "Huawei Pura 90S Pro",
     brand: "Huawei",
-    price: "Đang cập nhật",
+    price: "20.990.000₫",
     image: "/images/other/huawei/pura90s-pro.png",
     specs: {
       manHinh: 'LTPO OLED 6.6" / 1-120Hz',
