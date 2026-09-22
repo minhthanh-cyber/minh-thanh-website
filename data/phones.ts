@@ -593,7 +593,7 @@ export const phones: Phone[] = [
     image: "/images/other/oppo/oppo-find-x10.webp",
     specs: {
       manHinh: 'AMOLED 1.5K 6.59" / 120Hz',
-      chip: "Dimensity 9600 2nm",
+      chip: "Dimensity 9600M 2nm",
       ram: "12GB",
       boNho: "256GB / 512GB / 1TB",
       camera: "cập nhật",
@@ -611,7 +611,7 @@ export const phones: Phone[] = [
     specs: {
       manHinh: 'AMOLED 2K 6.9" / 144Hz',
       chip: "Dimensity 9600 Pro 2nm",
-      ram: "12GB",
+      ram: "12GB / 16GB",
       boNho: "256GB / 512GB / 1TB",
       camera: "cập nhật",
       pin: "cập nhật",
@@ -620,18 +620,18 @@ export const phones: Phone[] = [
   },
 
   {
-    id: "oppo-find-x10-pro",
-    name: "OPPO Find X10 Pro",
+    id: "oppo-find-x10e",
+    name: "OPPO Find X10E",
     brand: "OPPO",
     price: "cập nhật",
-    image: "/images/other/oppo/oppo-find-x10-pro.jpg",
+    image: "/images/other/oppo/oppo-find-x10e.png",
     specs: {
       manHinh: 'AMOLED 2K 6.82" / 144Hz',
       chip: "Dimensity 9600 Pro 2nm",
-      ram: "12GB",
-      boNho: "256GB / 512GB / 1TB",
+      ram: "12GB / 16GB",
+      boNho: "256GB / 512GB",
       camera: "cập nhật",
-      pin: "cập nhật",
+      pin: "7050mAh / sạc 100W",
       heDieuHanh: "ColorOS 17 & Android 17",
     },
   },
