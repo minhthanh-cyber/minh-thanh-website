@@ -597,7 +597,7 @@ export const phones: Phone[] = [
       ram: "12GB",
       boNho: "256GB / 512GB / 1TB",
       camera: "cập nhật",
-      pin: "cập nhật",
+      pin: "8000mAh / sạc 100W",
       heDieuHanh: "ColorOS 17 & Android 17",
     },
   },
