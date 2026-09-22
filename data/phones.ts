@@ -590,7 +590,7 @@ export const phones: Phone[] = [
     name: "OPPO Find X10",
     brand: "OPPO",
     price: "cập nhật",
-    image: "/images/other/oppo/oppo-find-x10.jpg",
+    image: "/images/other/oppo/oppo-find-x10.webp",
     specs: {
       manHinh: 'AMOLED 1.5K 6.59" / 120Hz',
       chip: "Dimensity 9600 2nm",
