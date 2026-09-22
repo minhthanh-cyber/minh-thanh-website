@@ -763,7 +763,7 @@ export const phones: Phone[] = [
   // HUAWEI
   // ========================================
 
-  {
+   {
     id: "huawei-mate-80-pro",
     name: "Huawei Mate 80 Pro",
     brand: "Huawei",
