@@ -28,7 +28,7 @@ export default function Header() {
       <header className="sticky top-0 z-50 border-b border-black/[0.08] bg-white/60 backdrop-blur-xl backdrop-saturate-150 dark:border-white/10 dark:bg-[#2B2B2B]/60">
         <div className="mx-auto flex h-[68px] max-w-content items-center gap-7 px-6">
           <Link href="/" className="whitespace-nowrap text-xl font-extrabold tracking-tight">
-            MINH THANH
+            THANH WIND
           </Link>
 
           <nav className="hidden flex-1 items-center gap-1 md:flex">
