@@ -713,7 +713,7 @@ export const phones: Phone[] = [
     name: "Honor Robot Phone",
     brand: "Honor",
     price: "25.490.000₫",
-    image: "/images/other/honor/honor-robot-phone.avif",
+    image: "/images/other/honor/honor-robot-phone.jpg",
     specs: {
       manHinh: 'HDR Oled 6.31"',
       chip: "Snapdragon 8 Elite",
