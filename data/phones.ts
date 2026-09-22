@@ -589,7 +589,7 @@ export const phones: Phone[] = [
     id: "oppo-find-x10",
     name: "OPPO Find X10",
     brand: "OPPO",
-    price: "cập nhật",
+    price: "21.599.000₫",
     image: "/images/other/oppo/oppo-find-x10.webp",
     specs: {
       manHinh: 'AMOLED 1.5K 6.59" / 120Hz',
@@ -606,7 +606,7 @@ export const phones: Phone[] = [
     id: "oppo-find-x10-pro-max",
     name: "OPPO Find X10 Pro Max",
     brand: "OPPO",
-    price: "cập nhật",
+    price: "26.599.000₫",
     image: "/images/other/oppo/oppo-find-x10-pro-max.webp",
     specs: {
       manHinh: 'AMOLED 2K 6.9" / 144Hz',
@@ -623,7 +623,7 @@ export const phones: Phone[] = [
     id: "oppo-find-x10e",
     name: "OPPO Find X10E",
     brand: "OPPO",
-    price: "cập nhật",
+    price: "19.5990.000₫",
     image: "/images/other/oppo/oppo-find-x10e.png",
     specs: {
       manHinh: 'AMOLED 2K 6.82" / 144Hz',
