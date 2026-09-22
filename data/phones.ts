@@ -709,6 +709,23 @@ export const phones: Phone[] = [
   // ========================================
 
   {
+    id: "honor-robot-phone",
+    name: "Honor Robot Phone",
+    brand: "Honor",
+    price: "25.490.000₫",
+    image: "/images/other/honor/honor-robot-phone.avif",
+    specs: {
+      manHinh: 'HDR Oled 6.31"',
+      chip: "Snapdragon 8 Elite",
+      ram: "12GB / 16GB",
+      boNho: "512G / 1TB",
+      camera: "200MP + 200MP + 50MP / trước 50MP",
+      pin: "7006mAh / sạc 120W",
+      heDieuHanh: "MagicOS 10 & Android 16",
+    },
+  },
+
+  {
     id: "honor-600-pro-molly",
     name: "Honor 600 Pro Molly",
     brand: "Honor",
@@ -721,7 +738,7 @@ export const phones: Phone[] = [
       boNho: "512GB",
       camera: "200MP + 50MP + 12MP / trước 50MP",
       pin: "7000mAh / sạc 80W",
-      heDieuHanh: "MagicOS 10 / Android",
+      heDieuHanh: "MagicOS 10 & Android 16",
     },
   },
 
@@ -738,7 +755,7 @@ export const phones: Phone[] = [
       boNho: "256GB",
       camera: "200MP + 50MP + 12MP / trước 50MP",
       pin: "7000mAh / sạc 80W",
-      heDieuHanh: "MagicOS 10 / Android",
+      heDieuHanh: "MagicOS 10 & Android 16",
     },
   },
 
@@ -755,7 +772,7 @@ export const phones: Phone[] = [
       boNho: "256GB",
       camera: "200MP + 12MP / trước 50MP",
       pin: "7000mAh / sạc 80W",
-      heDieuHanh: "MagicOS 10 / Android",
+      heDieuHanh: "MagicOS 10 & Android 16",
     },
   },
 
