@@ -259,7 +259,7 @@ export const phones: Phone[] = [
     name: "Xiaomi 18",
     brand: "Xiaomi",
     price: "21.990.000₫",
-    image: "/images/other/xiaomi/xiaomi-18.png",
+    image: "/images/xiaomi/xiaomi-18.png",
     specs: {
       manHinh: 'LTPO AMOLED 2K 6.4 icnh" / 1-120Hz',
       chip: "Snapdragon 8 Elite Gen 6",
@@ -276,7 +276,7 @@ export const phones: Phone[] = [
     name: "Xiaomi 18 Pro",
     brand: "Xiaomi",
     price: "21.990.000₫",
-    image: "/images/other/xiaomi/xiaomi-18-pro.png",
+    image: "/images/xiaomi/xiaomi-18-pro.png",
     specs: {
       manHinh: 'LTPO AMOLED 2K 6.4 icnh" / 1-120Hz',
       chip: "Snapdragon 8 Elite Gen 6",
@@ -293,7 +293,7 @@ export const phones: Phone[] = [
     name: "Xiaomi 18 Pro Max",
     brand: "Xiaomi",
     price: "26.990.000₫",
-    image: "/images/other/xiaomi/xiaomi-18-pro-max.jpg",
+    image: "/images/xiaomi/xiaomi-18-pro-max.jpg",
     specs: {
       manHinh: 'LTPO AMOLED 2K 6.9" / 1-120Hz',
       chip: "Snapdragon 8 Elite Gen 6 Pro",
@@ -310,7 +310,7 @@ export const phones: Phone[] = [
     name: "Xiaomi 18 Pro Max Edition",
     brand: "Xiaomi",
     price: "42.990.000₫",
-    image: "/images/other/xiaomi/xiaomi-18-pro-max-edition.png",
+    image: "/images/xiaomi/xiaomi-18-pro-max-edition.png",
     specs: {
       manHinh: 'LTPO AMOLED 2K 6.9" / 120Hz',
       chip: "Snapdragon 8 Elite Gen 6 2nm",
@@ -327,7 +327,7 @@ export const phones: Phone[] = [
     name: "Xiaomi 18 Fold",
     brand: "Xiaomi",
     price: "42.990.000₫",
-    image: "/images/other/xiaomi/xiaomi-18-fold.png",
+    image: "/images/xiaomi/xiaomi-18-fold.png",
     specs: {
       manHinh: 'LTPO AMOLED 7.6 inch & 5.38 inch" / 120Hz',
       chip: "Xring O3",
