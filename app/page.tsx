@@ -47,70 +47,66 @@ export default function HomePage() {
           </button>
         </div>
 
-        {/* KHU VỰC DANH MỤC CÓ LOGO HÃNG */}
+        {/* KHU VỰC DANH MỤC CÓ LOGO HÃNG LỚN (THAY CHO CHỮ) */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl">
-          {/* iPhone */}
+          {/* Apple / iPhone */}
           <Link
             href="/iphone"
-            className="flex flex-col items-center justify-center p-5 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 group"
+            className="flex flex-col items-center justify-center p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 group"
           >
-            <div className="w-10 h-10 mb-2 flex items-center justify-center">
+            <div className="h-10 w-28 flex items-center justify-center mb-2">
               <img
                 src="/images/brands/apple-iphone.png"
                 alt="Apple Logo"
                 className="max-h-full max-w-full object-contain filter dark:invert"
               />
             </div>
-            <span className="font-bold text-gray-900 dark:text-white text-lg">iPhone</span>
-            <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">8 thiết bị</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">8 thiết bị</span>
           </Link>
 
           {/* Samsung */}
           <Link
             href="/samsung"
-            className="flex flex-col items-center justify-center p-5 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 group"
+            className="flex flex-col items-center justify-center p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 group"
           >
-            <div className="w-10 h-10 mb-2 flex items-center justify-center">
+            <div className="h-10 w-28 flex items-center justify-center mb-2">
               <img
                 src="/images/brands/samsung.png"
                 alt="Samsung Logo"
-                className="max-h-full max-w-full object-contain"
+                className="max-h-full max-w-full object-contain dark:brightness-200"
               />
             </div>
-            <span className="font-bold text-gray-900 dark:text-white text-lg">Samsung</span>
-            <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">4 thiết bị</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">4 thiết bị</span>
           </Link>
 
           {/* Xiaomi */}
           <Link
             href="/xiaomi"
-            className="flex flex-col items-center justify-center p-5 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 group"
+            className="flex flex-col items-center justify-center p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 group"
           >
-            <div className="w-10 h-10 mb-2 flex items-center justify-center">
+            <div className="h-10 w-28 flex items-center justify-center mb-2">
               <img
                 src="/images/brands/xiaomi.png"
                 alt="Xiaomi Logo"
                 className="max-h-full max-w-full object-contain"
               />
             </div>
-            <span className="font-bold text-gray-900 dark:text-white text-lg">Xiaomi</span>
-            <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">12 thiết bị</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">12 thiết bị</span>
           </Link>
 
-          {/* Khác */}
+          {/* Khác / OPPO */}
           <Link
             href="/khac"
-            className="flex flex-col items-center justify-center p-5 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 group"
+            className="flex flex-col items-center justify-center p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 group"
           >
-            <div className="w-10 h-10 mb-2 flex items-center justify-center">
+            <div className="h-10 w-28 flex items-center justify-center mb-2">
               <img
                 src="/images/brands/oppo.png"
-                alt="Khác Logo"
+                alt="OPPO Logo"
                 className="max-h-full max-w-full object-contain"
               />
             </div>
-            <span className="font-bold text-gray-900 dark:text-white text-lg">Khác</span>
-            <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">Vivo • OPPO • Honor</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">Vivo • OPPO • Honor</span>
           </Link>
         </div>
       </section>
