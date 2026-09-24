@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import PhoneGrid from "@/components/PhoneGrid";
 import LiquidLensSearchModal from "@/components/LiquidLensSearchModal";
 import { phones } from "@/data/phones";
@@ -8,7 +9,6 @@ import { phones } from "@/data/phones";
 export default function HomePage() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-  // Hàm cuộn mượt xuống danh sách sản phẩm
   const scrollToAllPhones = () => {
     const section = document.getElementById("all-phones-section");
     if (section) {
@@ -17,27 +17,30 @@ export default function HomePage() {
   };
 
   return (
-    <main className="container mx-auto px-4 py-8 max-w-6xl">
-      {/* Hero Section */}
-      <section className="mb-12">
-        <h1 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight leading-tight mb-4">
+    <main className="container mx-auto px-4 py-12 max-w-6xl">
+      
+      {/* 1. SECTION HERO & NÚT BẤM - CĂN GIỮA TOÀN BỘ */}
+      <section className="flex flex-col items-center text-center mb-16 max-w-3xl mx-auto">
+        
+        {/* Tiêu đề chính căn giữa */}
+        <h1 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight leading-tight mb-6">
           Tra cứu điện thoại<br />nhanh, rõ ràng, không<br />rối mắt.
         </h1>
-        <p className="text-gray-600 dark:text-gray-300 max-w-xl mb-8">
+
+        {/* Đoạn văn mô tả căn giữa */}
+        <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg max-w-xl mb-8">
           Minh Thanh tổng hợp giá bán, cấu hình và thông số của các dòng điện thoại phổ biến tại Việt Nam — giúp bạn so sánh và chọn máy dễ dàng hơn.
         </p>
 
-        {/* 2 Nút hành động */}
-        <div className="flex flex-wrap gap-4">
-          {/* Nút 1: Khám phá điện thoại -> Cuộn xuống danh sách */}
+        {/* 2 Nút hành động căn giữa */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
           <button
             onClick={scrollToAllPhones}
-            className="rounded-full bg-black px-6 py-3 text-sm font-semibold text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 transition"
+            className="rounded-full bg-black px-6 py-3 text-sm font-semibold text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 transition shadow-md"
           >
             Khám phá điện thoại
           </button>
 
-          {/* Nút 2: Tìm kiếm thiết bị -> Mở Popup Ống kính lỏng */}
           <button
             onClick={() => setIsSearchOpen(true)}
             className="rounded-full border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-800/80 px-6 py-3 text-sm font-semibold text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition backdrop-blur-md shadow-sm"
@@ -45,21 +48,54 @@ export default function HomePage() {
             Tìm kiếm thiết bị 🔍
           </button>
         </div>
+
+        {/* 2. KHU VỰC DANH MỤC NHANH (iPhone, Samsung, Xiaomi, Khác) CĂN GIỮA */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl">
+          <Link
+            href="/iphone"
+            className="flex flex-col items-center justify-center p-5 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
+          >
+            <span className="font-bold text-gray-900 dark:text-white text-lg">iPhone</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">8 thiết bị</span>
+          </Link>
+
+          <Link
+            href="/samsung"
+            className="flex flex-col items-center justify-center p-5 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
+          >
+            <span className="font-bold text-gray-900 dark:text-white text-lg">Samsung</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">4 thiết bị</span>
+          </Link>
+
+          <Link
+            href="/xiaomi"
+            className="flex flex-col items-center justify-center p-5 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
+          >
+            <span className="font-bold text-gray-900 dark:text-white text-lg">Xiaomi</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">12 thiết bị</span>
+          </Link>
+
+          <Link
+            href="/khac"
+            className="flex flex-col items-center justify-center p-5 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
+          >
+            <span className="font-bold text-gray-900 dark:text-white text-lg">Khác</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">Vivo • OPPO • Honor</span>
+          </Link>
+        </div>
+
       </section>
 
       {/* Popup Tìm kiếm Ống kính lỏng */}
       <LiquidLensSearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
 
-      {/* Danh mục nhanh (iPhone, Samsung, Xiaomi, Khác) */}
-      {/* ... Giữ nguyên phần danh mục nhanh của bạn ở đây ... */}
-
-      {/* Phần Danh Sách Tất Cả Điện Thoại */}
-      <section id="all-phones-section" className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-800">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+      {/* 3. PHẦN DANH SÁCH TẤT CẢ ĐIỆN THOẠI */}
+      <section id="all-phones-section" className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center md:text-left">
           Tất cả điện thoại hiện có ({phones.length} thiết bị)
         </h2>
 
-        {/* Lưới sản phẩm với hiệu ứng rê chuột tráng gương */}
+        {/* Lưới sản phẩm */}
         <PhoneGrid phones={phones} />
       </section>
     </main>
