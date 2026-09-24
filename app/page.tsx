@@ -47,14 +47,15 @@ export default function HomePage() {
           </button>
         </div>
 
-        {/* 2. KHU VỰC DANH MỤC CÁC HÃNG */}
+        {/* 2. KHU VỰC DANH MỤC THƯƠNG HIỆU CÓ HIỆU ỨNG GƯƠNG CHẠY QUA (HOVER SHINE) */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3 w-full max-w-6xl">
           
           {/* iPhone */}
           <Link
             href="/iphone"
-            className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
+            className="group relative overflow-hidden flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
           >
+            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent group-hover:animate-shine pointer-events-none" />
             <div className="h-8 w-16 flex items-center justify-center mb-2">
               <img src="/images/brands/apple-iphone.png" alt="Apple" className="max-h-full max-w-full object-contain filter dark:invert" />
             </div>
@@ -66,8 +67,9 @@ export default function HomePage() {
           {/* Samsung */}
           <Link
             href="/samsung"
-            className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
+            className="group relative overflow-hidden flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
           >
+            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent group-hover:animate-shine pointer-events-none" />
             <div className="h-8 w-16 flex items-center justify-center mb-2">
               <img src="/images/brands/samsung.png" alt="Samsung" className="max-h-full max-w-full object-contain dark:brightness-200" />
             </div>
@@ -79,8 +81,9 @@ export default function HomePage() {
           {/* Xiaomi */}
           <Link
             href="/xiaomi"
-            className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
+            className="group relative overflow-hidden flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
           >
+            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent group-hover:animate-shine pointer-events-none" />
             <div className="h-8 w-16 flex items-center justify-center mb-2">
               <img src="/images/brands/xiaomi.png" alt="Xiaomi" className="max-h-full max-w-full object-contain" />
             </div>
@@ -92,8 +95,9 @@ export default function HomePage() {
           {/* OPPO */}
           <Link
             href="/khac/oppo"
-            className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
+            className="group relative overflow-hidden flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
           >
+            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent group-hover:animate-shine pointer-events-none" />
             <div className="h-8 w-16 flex items-center justify-center mb-2">
               <img src="/images/brands/oppo.png" alt="OPPO" className="max-h-full max-w-full object-contain" />
             </div>
@@ -105,8 +109,9 @@ export default function HomePage() {
           {/* Vivo */}
           <Link
             href="/khac/vivo"
-            className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
+            className="group relative overflow-hidden flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
           >
+            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent group-hover:animate-shine pointer-events-none" />
             <div className="h-8 w-16 flex items-center justify-center mb-2">
               <img src="/images/brands/vivo.png" alt="Vivo" className="max-h-full max-w-full object-contain" />
             </div>
@@ -118,8 +123,9 @@ export default function HomePage() {
           {/* Honor */}
           <Link
             href="/khac/honor"
-            className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
+            className="group relative overflow-hidden flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
           >
+            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent group-hover:animate-shine pointer-events-none" />
             <div className="h-8 w-16 flex items-center justify-center mb-2">
               <img src="/images/brands/honor.png" alt="Honor" className="max-h-full max-w-full object-contain" />
             </div>
@@ -131,8 +137,9 @@ export default function HomePage() {
           {/* Huawei */}
           <Link
             href="/khac/huawei"
-            className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
+            className="group relative overflow-hidden flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
           >
+            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent group-hover:animate-shine pointer-events-none" />
             <div className="h-8 w-16 flex items-center justify-center mb-2">
               <img src="/images/brands/huawei.png" alt="Huawei" className="max-h-full max-w-full object-contain" />
             </div>
