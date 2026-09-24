@@ -6,7 +6,7 @@ export default function MarqueeLogo() {
         <div className="relative flex h-7 w-7 items-center justify-center overflow-hidden rounded-full border border-gray-200 bg-white p-0.5 shadow-sm dark:border-gray-700">
           <img
             src="/logo.png"
-            alt="Thanh Wind Logo"
+            alt="logo"
             className="h-full w-full object-contain"
           />
         </div>
