@@ -47,67 +47,100 @@ export default function HomePage() {
           </button>
         </div>
 
-        {/* KHU VỰC DANH MỤC CÓ LOGO HÃNG LỚN (THAY CHO CHỮ) */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl">
-          {/* Apple / iPhone */}
+        {/* 2. KHU VỰC DANH MỤC TÁCH RIÊNG TẤT CẢ CÁC HÃNG */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3 w-full max-w-6xl">
+          
+          {/* iPhone */}
           <Link
             href="/iphone"
-            className="flex flex-col items-center justify-center p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 group"
+            className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
           >
-            <div className="h-10 w-28 flex items-center justify-center mb-2">
-              <img
-                src="/images/brands/apple-iphone.png"
-                alt="Apple Logo"
-                className="max-h-full max-w-full object-contain filter dark:invert"
-              />
+            <div className="h-8 w-16 flex items-center justify-center mb-2">
+              <img src="/images/brands/apple-iphone.png" alt="Apple" className="max-h-full max-w-full object-contain filter dark:invert" />
             </div>
-            <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">8 thiết bị</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
+              {phones.filter(p => p.brand.toLowerCase() === "iphone" || p.brand.toLowerCase() === "apple").length} thiết bị
+            </span>
           </Link>
 
           {/* Samsung */}
           <Link
             href="/samsung"
-            className="flex flex-col items-center justify-center p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 group"
+            className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
           >
-            <div className="h-10 w-28 flex items-center justify-center mb-2">
-              <img
-                src="/images/brands/samsung.png"
-                alt="Samsung Logo"
-                className="max-h-full max-w-full object-contain dark:brightness-200"
-              />
+            <div className="h-8 w-16 flex items-center justify-center mb-2">
+              <img src="/images/brands/samsung.png" alt="Samsung" className="max-h-full max-w-full object-contain dark:brightness-200" />
             </div>
-            <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">4 thiết bị</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
+              {phones.filter(p => p.brand.toLowerCase() === "samsung").length} thiết bị
+            </span>
           </Link>
 
           {/* Xiaomi */}
           <Link
             href="/xiaomi"
-            className="flex flex-col items-center justify-center p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 group"
+            className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
           >
-            <div className="h-10 w-28 flex items-center justify-center mb-2">
-              <img
-                src="/images/brands/xiaomi.png"
-                alt="Xiaomi Logo"
-                className="max-h-full max-w-full object-contain"
-              />
+            <div className="h-8 w-16 flex items-center justify-center mb-2">
+              <img src="/images/brands/xiaomi.png" alt="Xiaomi" className="max-h-full max-w-full object-contain" />
             </div>
-            <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">12 thiết bị</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
+              {phones.filter(p => p.brand.toLowerCase() === "xiaomi").length} thiết bị
+            </span>
           </Link>
 
-          {/* Khác / OPPO */}
+          {/* OPPO */}
           <Link
-            href="/khac"
-            className="flex flex-col items-center justify-center p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 group"
+            href="/khac/oppo"
+            className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
           >
-            <div className="h-10 w-28 flex items-center justify-center mb-2">
-              <img
-                src="/images/brands/oppo.png"
-                alt="OPPO Logo"
-                className="max-h-full max-w-full object-contain"
-              />
+            <div className="h-8 w-16 flex items-center justify-center mb-2">
+              <img src="/images/brands/oppo.png" alt="OPPO" className="max-h-full max-w-full object-contain" />
             </div>
-            <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">Vivo • OPPO • Honor</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
+              {phones.filter(p => p.brand.toLowerCase() === "oppo").length} thiết bị
+            </span>
           </Link>
+
+          {/* Vivo */}
+          <Link
+            href="/khac/vivo"
+            className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
+          >
+            <div className="h-8 w-16 flex items-center justify-center mb-2">
+              <img src="/images/brands/vivo.png" alt="Vivo" className="max-h-full max-w-full object-contain" />
+            </div>
+            <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
+              {phones.filter(p => p.brand.toLowerCase() === "vivo").length} thiết bị
+            </span>
+          </Link>
+
+          {/* Honor */}
+          <Link
+            href="/khac/honor"
+            className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
+          >
+            <div className="h-8 w-16 flex items-center justify-center mb-2">
+              <img src="/images/brands/honor.png" alt="Honor" className="max-h-full max-w-full object-contain" />
+            </div>
+            <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
+              {phones.filter(p => p.brand.toLowerCase() === "honor").length} thiết bị
+            </span>
+          </Link>
+
+          {/* Huawei */}
+          <Link
+            href="/khac/huawei"
+            className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
+          >
+            <div className="h-8 w-16 flex items-center justify-center mb-2">
+              <img src="/images/brands/huawei.png" alt="Huawei" className="max-h-full max-w-full object-contain" />
+            </div>
+            <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
+              {phones.filter(p => p.brand.toLowerCase() === "huawei").length} thiết bị
+            </span>
+          </Link>
+
         </div>
       </section>
 
