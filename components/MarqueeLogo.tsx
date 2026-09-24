@@ -1,6 +1,10 @@
 "use client";
 
+import { useState } from "react";
+
 export default function MarqueeLogo() {
+  const [hasError, setHasError] = useState(false);
+
   const items = [
     "THANH WIND OFFICIAL",
     "Tra cứu điện thoại nhanh chóng & chính xác",
@@ -15,15 +19,18 @@ export default function MarqueeLogo() {
             <span className="text-gray-400 dark:text-gray-600">•</span>
             {text === "THANH WIND OFFICIAL" ? (
               <div className="flex items-center gap-2">
-                <img
-                  src="/public/images/logo.png"
-                  alt="Thanh Wind Logo"
-                  className="h-5 w-5 rounded-full object-cover border border-gray-200 dark:border-gray-700 shadow-xs"
-                  onError={(e) => {
-                    // Nếu không thấy file logo.png thì tự động đổi sang dùng chữ icon để không bao giờ vỡ ảnh
-                    (e.target as HTMLElement).style.display = "none";
-                  }}
-                />
+                {!hasError ? (
+                  <img
+                    src="/images/logo.png"
+                    alt="Thanh Wind Official Logo"
+                    className="h-5 w-5 rounded-full object-cover border border-gray-200 dark:border-gray-700 shadow-xs"
+                    onError={() => setHasError(true)}
+                  />
+                ) : (
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-black dark:bg-white text-[10px] font-black text-white dark:text-black">
+                    TW
+                  </span>
+                )}
                 <span className="font-extrabold text-gray-900 dark:text-white tracking-wide">
                   THANH WIND OFFICIAL
                 </span>
