@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import PhoneGrid from "@/components/PhoneGrid";
 import LiquidLensSearchModal from "@/components/LiquidLensSearchModal";
+import MarqueeLogo from "@/components/MarqueeLogo"; // Import dải chạy logo
 import { phones } from "@/data/phones";
 
 export default function HomePage() {
@@ -19,20 +20,17 @@ export default function HomePage() {
   return (
     <main className="container mx-auto px-4 py-12 max-w-6xl">
       
-      {/* 1. SECTION HERO & NÚT BẤM - CĂN GIỮA TOÀN BỘ */}
+      {/* 1. KHU VỰC HERO CĂN GIỮA */}
       <section className="flex flex-col items-center text-center mb-16 max-w-3xl mx-auto">
-        
-        {/* Tiêu đề chính căn giữa */}
         <h1 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white tracking-tight leading-tight mb-6">
           Tra cứu điện thoại<br />nhanh, rõ ràng, không<br />rối mắt.
         </h1>
 
-        {/* Đoạn văn mô tả căn giữa */}
         <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg max-w-xl mb-8">
           Minh Thanh tổng hợp giá bán, cấu hình và thông số của các dòng điện thoại phổ biến tại Việt Nam — giúp bạn so sánh và chọn máy dễ dàng hơn.
         </p>
 
-        {/* 2 Nút hành động căn giữa */}
+        {/* Nút bấm */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <button
             onClick={scrollToAllPhones}
@@ -49,7 +47,7 @@ export default function HomePage() {
           </button>
         </div>
 
-        {/* 2. KHU VỰC DANH MỤC NHANH (iPhone, Samsung, Xiaomi, Khác) CĂN GIỮA */}
+        {/* Danh mục nhanh */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl">
           <Link
             href="/iphone"
@@ -83,14 +81,18 @@ export default function HomePage() {
             <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">Vivo • OPPO • Honor</span>
           </Link>
         </div>
-
       </section>
 
       {/* Popup Tìm kiếm Ống kính lỏng */}
       <LiquidLensSearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
 
+      {/* 2. DẢI CHẠY LOGO NGANG BÊN TRÊN TẤT CẢ ĐIỆN THOẠI */}
+      <div className="my-10">
+        <MarqueeLogo />
+      </div>
+
       {/* 3. PHẦN DANH SÁCH TẤT CẢ ĐIỆN THOẠI */}
-      <section id="all-phones-section" className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+      <section id="all-phones-section" className="pt-4">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center md:text-left">
           Tất cả điện thoại hiện có ({phones.length} thiết bị)
         </h2>
