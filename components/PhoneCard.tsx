@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { Phone } from "@/data/phones";
 
-export default function PhoneCard({ title, imageSrc }: { title: string; imageSrc: string }) {
+export default function PhoneCard({ phone }: { phone: Phone }) {
   return (
     <div className="group relative overflow-hidden rounded-xl bg-white p-4 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl dark:bg-gray-800">
       
@@ -10,10 +11,10 @@ export default function PhoneCard({ title, imageSrc }: { title: string; imageSrc
         {/* 1. Vệt sáng tráng gương */}
         <div className="absolute inset-0 z-10 -left-full w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-25deg] pointer-events-none group-hover:animate-shine" />
 
-        {/* 2. Ảnh Thumbnail với hiệu ứng nẩy nhẹ khi rê chuột */}
+        {/* 2. Ảnh Thumbnail với hiệu ứng nẩy nhẹ */}
         <Image
-          src={imageSrc}
-          alt={title}
+          src={phone.image || "/images/placeholder.png"}
+          alt={phone.name}
           fill
           className="object-contain transition-transform duration-300 ease-out group-hover:scale-105"
         />
@@ -21,7 +22,7 @@ export default function PhoneCard({ title, imageSrc }: { title: string; imageSrc
 
       {/* Tên sản phẩm */}
       <h3 className="mt-3 text-center text-sm font-semibold text-gray-800 dark:text-gray-100">
-        {title}
+        {phone.name}
       </h3>
     </div>
   );
