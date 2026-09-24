@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import PhoneGrid from "@/components/PhoneGrid";
 import LiquidLensSearchModal from "@/components/LiquidLensSearchModal";
-import MarqueeLogo from "@/components/MarqueeLogo"; // Import dải chạy logo
+import MarqueeLogo from "@/components/MarqueeLogo";
 import { phones } from "@/data/phones";
 
 export default function HomePage() {
@@ -47,36 +47,68 @@ export default function HomePage() {
           </button>
         </div>
 
-        {/* Danh mục nhanh */}
+        {/* KHU VỰC DANH MỤC CÓ LOGO HÃNG */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl">
+          {/* iPhone */}
           <Link
             href="/iphone"
-            className="flex flex-col items-center justify-center p-5 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
+            className="flex flex-col items-center justify-center p-5 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 group"
           >
+            <div className="w-10 h-10 mb-2 flex items-center justify-center">
+              <img
+                src="/images/brands/apple-iphone.png"
+                alt="Apple Logo"
+                className="max-h-full max-w-full object-contain filter dark:invert"
+              />
+            </div>
             <span className="font-bold text-gray-900 dark:text-white text-lg">iPhone</span>
             <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">8 thiết bị</span>
           </Link>
 
+          {/* Samsung */}
           <Link
             href="/samsung"
-            className="flex flex-col items-center justify-center p-5 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
+            className="flex flex-col items-center justify-center p-5 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 group"
           >
+            <div className="w-10 h-10 mb-2 flex items-center justify-center">
+              <img
+                src="/images/brands/samsung.png"
+                alt="Samsung Logo"
+                className="max-h-full max-w-full object-contain"
+              />
+            </div>
             <span className="font-bold text-gray-900 dark:text-white text-lg">Samsung</span>
             <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">4 thiết bị</span>
           </Link>
 
+          {/* Xiaomi */}
           <Link
             href="/xiaomi"
-            className="flex flex-col items-center justify-center p-5 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
+            className="flex flex-col items-center justify-center p-5 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 group"
           >
+            <div className="w-10 h-10 mb-2 flex items-center justify-center">
+              <img
+                src="/images/brands/xiaomi.png"
+                alt="Xiaomi Logo"
+                className="max-h-full max-w-full object-contain"
+              />
+            </div>
             <span className="font-bold text-gray-900 dark:text-white text-lg">Xiaomi</span>
             <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">12 thiết bị</span>
           </Link>
 
+          {/* Khác */}
           <Link
             href="/khac"
-            className="flex flex-col items-center justify-center p-5 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300"
+            className="flex flex-col items-center justify-center p-5 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 group"
           >
+            <div className="w-10 h-10 mb-2 flex items-center justify-center">
+              <img
+                src="/images/brands/oppo.png"
+                alt="Khác Logo"
+                className="max-h-full max-w-full object-contain"
+              />
+            </div>
             <span className="font-bold text-gray-900 dark:text-white text-lg">Khác</span>
             <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">Vivo • OPPO • Honor</span>
           </Link>
@@ -86,12 +118,12 @@ export default function HomePage() {
       {/* Popup Tìm kiếm Ống kính lỏng */}
       <LiquidLensSearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
 
-      {/* 2. DẢI CHẠY LOGO NGANG BÊN TRÊN TẤT CẢ ĐIỆN THOẠI */}
+      {/* DẢI CHẠY LOGO NGANG */}
       <div className="my-10">
         <MarqueeLogo />
       </div>
 
-      {/* 3. PHẦN DANH SÁCH TẤT CẢ ĐIỆN THOẠI */}
+      {/* PHẦN DANH SÁCH TẤT CẢ ĐIỆN THOẠI */}
       <section id="all-phones-section" className="pt-4">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center md:text-left">
           Tất cả điện thoại hiện có ({phones.length} thiết bị)
