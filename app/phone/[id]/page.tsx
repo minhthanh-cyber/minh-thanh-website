@@ -3,17 +3,18 @@
 import { useState } from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { phones } from "@/data/phones";
+import { phones, PhoneVariant } from "@/data/phones";
 
 export default function PhoneDetailPage({ params }: { params: { id: string } }) {
+  // Tìm điện thoại theo id
   const phone = phones.find((p) => p.id === params.id);
 
   if (!phone) {
     notFound();
   }
 
-  // Quản lý phiên bản bộ nhớ được chọn
-  const [selectedVariant, setSelectedVariant] = useState(
+  // Quản lý phiên bản bộ nhớ chọn sẵn (nếu có)
+  const [selectedVariant, setSelectedVariant] = useState<PhoneVariant | null>(
     phone.variants && phone.variants.length > 0 ? phone.variants[0] : null
   );
 
@@ -50,7 +51,7 @@ export default function PhoneDetailPage({ params }: { params: { id: string } }) 
             {phone.name}
           </h1>
 
-          {/* Hiển thị giá */}
+          {/* Hiển thị giá theo phiên bản */}
           <div className="text-2xl font-bold text-red-600 dark:text-red-500 mb-6">
             {displayPrice}
           </div>
@@ -62,7 +63,7 @@ export default function PhoneDetailPage({ params }: { params: { id: string } }) 
                 Chọn phiên bản bộ nhớ:
               </label>
               <div className="flex flex-wrap gap-3">
-                {phone.variants.map((variant, index) => {
+                {phone.variants.map((variant: PhoneVariant, index: number) => {
                   const isSelected = selectedVariant?.storage === variant.storage;
                   return (
                     <button
@@ -85,7 +86,7 @@ export default function PhoneDetailPage({ params }: { params: { id: string } }) 
             </div>
           )}
 
-          {/* BẢNG THÔNG SỐ (ĐÃ BỎ MỤC RAM) */}
+          {/* BẢNG THÔNG SỐ KỸ THUẬT (ĐÃ XÓA MỤC RAM) */}
           <div className="overflow-hidden rounded-2xl border border-gray-100 dark:border-gray-700/80 bg-white dark:bg-gray-800/50 shadow-sm">
             <div className="p-4 bg-gray-50 dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700/80 font-bold text-gray-900 dark:text-white text-sm">
               Thông số kỹ thuật
