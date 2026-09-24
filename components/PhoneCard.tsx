@@ -1,10 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Phone } from "@/data/phones";
 
 export default function PhoneCard({ phone }: { phone: Phone }) {
   return (
-    <div className="group relative overflow-hidden rounded-xl bg-white p-4 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl dark:bg-gray-800">
-      
+    <Link 
+      href={`/phone/${phone.id}`}
+      className="group block relative overflow-hidden rounded-xl bg-white p-4 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl dark:bg-gray-800 cursor-pointer"
+    >
       {/* Khung chứa Thumbnail */}
       <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-700">
         
@@ -21,9 +24,9 @@ export default function PhoneCard({ phone }: { phone: Phone }) {
       </div>
 
       {/* Tên sản phẩm */}
-      <h3 className="mt-3 text-center text-sm font-semibold text-gray-800 dark:text-gray-100">
+      <h3 className="mt-3 text-center text-sm font-semibold text-gray-800 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
         {phone.name}
       </h3>
-    </div>
+    </Link>
   );
 }
