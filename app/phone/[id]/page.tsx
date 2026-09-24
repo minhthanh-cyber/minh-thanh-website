@@ -1,19 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useState, use } from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { phones, PhoneVariant } from "@/data/phones";
 
-export default function PhoneDetailPage({ params }: { params: { id: string } }) {
-  // Tìm điện thoại theo id
-  const phone = phones.find((p) => p.id === params.id);
+export default function PhoneDetailPage({
+  params,
+}: {
+  params: Promise<{ id: string }> | { id: string };
+}) {
+  // Giải nén params an toàn cho cả Next.js Server & Client Component
+  const resolvedParams = params instanceof Promise ? use(params) : params;
+  const phone = phones.find((p) => p.id === resolvedParams.id);
 
   if (!phone) {
     notFound();
   }
 
-  // Quản lý phiên bản bộ nhớ chọn sẵn (nếu có)
+  // Quản lý phiên bản bộ nhớ được chọn
   const [selectedVariant, setSelectedVariant] = useState<PhoneVariant | null>(
     phone.variants && phone.variants.length > 0 ? phone.variants[0] : null
   );
@@ -51,12 +56,12 @@ export default function PhoneDetailPage({ params }: { params: { id: string } }) 
             {phone.name}
           </h1>
 
-          {/* Hiển thị giá theo phiên bản */}
+          {/* Hiển thị giá */}
           <div className="text-2xl font-bold text-red-600 dark:text-red-500 mb-6">
             {displayPrice}
           </div>
 
-          {/* TÙY CHỌN PHIÊN BẢN BỘ NHỚ */}
+          {/* CHỌN PHIÊN BẢN BỘ NHỚ & GIÁ TIỀN */}
           {phone.variants && phone.variants.length > 0 && (
             <div className="mb-8">
               <label className="block text-sm font-semibold text-gray-900 dark:text-white mb-3">
