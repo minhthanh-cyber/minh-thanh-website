@@ -16,7 +16,7 @@ export default function MarqueeLogo() {
             {text === "THANH WIND OFFICIAL" ? (
               <div className="flex items-center gap-2">
                 <img
-                  src="/logo.png"
+                  src="/public/images/logo.png"
                   alt="Thanh Wind Logo"
                   className="h-5 w-5 rounded-full object-cover border border-gray-200 dark:border-gray-700 shadow-xs"
                   onError={(e) => {
