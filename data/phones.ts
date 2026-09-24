@@ -254,6 +254,23 @@ export const phones: Phone[] = [
   // XIAOMI
   // ========================================
 
+   {
+    id: "xiaomi-18",
+    name: "Xiaomi 18",
+    brand: "Xiaomi",
+    price: "21.990.000₫",
+    image: "/images/other/xiaomi/xiaomi-18.png",
+    specs: {
+      manHinh: 'LTPO AMOLED 2K 6.4 icnh" / 1-120Hz',
+      chip: "Snapdragon 8 Elite Gen 6",
+      ram: "12GB / 16GB",
+      boNho: "256GB / 512GB / 1TB",
+      camera: "200MP + 50MP / trước 50MP",
+      pin: "7000mAh & sạc Supercharge 100w",
+      heDieuHanh: "HyperOS 4 & Android 17",
+    },
+  },
+
   {
     id: "xiaomi-18-pro",
     name: "Xiaomi 18 Pro",
