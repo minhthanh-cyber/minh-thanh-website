@@ -554,7 +554,7 @@ export const phones: Phone[] = [
     name: "Vivo X500",
     brand: "Vivo",
     price: "21.590.000₫",
-    image: "/images/other/vivo/vivo-x500.jpg",
+    image: "/images/other/vivo/vivo-x500.png",
     variants: [
       { storage: "12/256GB", price: "21.590.000₫" },
       { storage: "12/512GB", price: "23.990.000₫" },
@@ -574,7 +574,7 @@ export const phones: Phone[] = [
     name: "Vivo X500 Pro",
     brand: "Vivo",
     price: "25.590.000₫",
-    image: "/images/other/vivo/vivo-x500-pro.jpg",
+    image: "/images/other/vivo/vivo-x500-pro.png",
     variants: [
       { storage: "12/256GB", price: "25.590.000₫" },
       { storage: "12/512GB", price: "28.590.000₫" },
@@ -594,7 +594,7 @@ export const phones: Phone[] = [
     name: "Vivo X500 Pro Max",
     brand: "Vivo",
     price: "27.590.000₫",
-    image: "/images/other/vivo/vivo-x500-pro-max.jpg",
+    image: "/images/other/vivo/vivo-x500-pro-max.png",
     variants: [
       { storage: "12/256GB", price: "27.590.000₫" },
       { storage: "16/512GB", price: "30.990.000₫" },
@@ -853,11 +853,11 @@ export const phones: Phone[] = [
   // ========================================
 
    {
-    id: "honor-robot-phone",
-    name: "Honor Robot Phone",
+    id: "honor-magic-9-ban-dac-biet",
+    name: "Honor Magic 9 Bản Đặc Biệt",
     brand: "Honor",
     price: "25.490.000₫",
-    image: "/images/other/honor/honor-robot-phone.jpg",
+    image: "/images/other/honor/honor-magic-9-edition.jpg",
     variants: [
       { storage: "12/512GB", price: "25.490.000₫" },
       { storage: "16/1TB", price: "29.490.000₫" },
@@ -873,11 +873,11 @@ export const phones: Phone[] = [
   },
 
    {
-    id: "honor-robot-phone",
-    name: "Honor Robot Phone",
+    id: "honor-magic-9",
+    name: "Honor Magic 9",
     brand: "Honor",
     price: "25.490.000₫",
-    image: "/images/other/honor/honor-robot-phone.jpg",
+    image: "/images/other/honor/honor-magic-9.jpg",
     variants: [
       { storage: "12/512GB", price: "25.490.000₫" },
       { storage: "16/1TB", price: "29.490.000₫" },
