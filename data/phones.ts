@@ -853,11 +853,11 @@ export const phones: Phone[] = [
   // ========================================
 
    {
-    id: "honor-magic-9-ban-dac-biet",
-    name: "Honor Magic 9 Bản Đặc Biệt",
+    id: "honor-magic-9-super-edition",
+    name: "Honor Magic 9 Super Edition",
     brand: "Honor",
     price: "25.490.000₫",
-    image: "/images/other/honor/honor-magic-9-edition.jpg",
+    image: "/images/other/honor/honor-magic-9-super-edition.jpg",
     variants: [
       { storage: "12/512GB", price: "25.490.000₫" },
       { storage: "16/1TB", price: "29.490.000₫" },
@@ -893,11 +893,11 @@ export const phones: Phone[] = [
   },
 
    {
-    id: "honor-robot-phone",
-    name: "Honor Robot Phone",
+    id: "honor-magic-9-pro-max",
+    name: "Honor Magic 9 Pro Max",
     brand: "Honor",
     price: "25.490.000₫",
-    image: "/images/other/honor/honor-robot-phone.jpg",
+    image: "/images/other/honor/honor-magic-9-pro-max.png",
     variants: [
       { storage: "12/512GB", price: "25.490.000₫" },
       { storage: "16/1TB", price: "29.490.000₫" },
@@ -917,7 +917,7 @@ export const phones: Phone[] = [
     name: "Honor Robot Phone",
     brand: "Honor",
     price: "25.490.000₫",
-    image: "/images/other/honor/honor-robot-phone.jpg",
+    image: "/images/other/honor/honor-robot-phone.png",
     variants: [
       { storage: "12/512GB", price: "25.490.000₫" },
       { storage: "16/1TB", price: "29.490.000₫" },
