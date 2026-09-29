@@ -851,6 +851,67 @@ export const phones: Phone[] = [
   // ========================================
   // HONOR
   // ========================================
+
+   {
+    id: "honor-robot-phone",
+    name: "Honor Robot Phone",
+    brand: "Honor",
+    price: "25.490.000₫",
+    image: "/images/other/honor/honor-robot-phone.jpg",
+    variants: [
+      { storage: "12/512GB", price: "25.490.000₫" },
+      { storage: "16/1TB", price: "29.490.000₫" },
+    ],
+    specs: {
+      manHinh: 'HDR Oled 6.31"',
+      chip: "Snapdragon 8 Elite",
+      boNho: "512GB / 1TB",
+      camera: "200MP + 200MP + 50MP / trước 50MP",
+      pin: "7006mAh / sạc 120W",
+      heDieuHanh: "MagicOS 10 & Android 16",
+    },
+  },
+
+   {
+    id: "honor-robot-phone",
+    name: "Honor Robot Phone",
+    brand: "Honor",
+    price: "25.490.000₫",
+    image: "/images/other/honor/honor-robot-phone.jpg",
+    variants: [
+      { storage: "12/512GB", price: "25.490.000₫" },
+      { storage: "16/1TB", price: "29.490.000₫" },
+    ],
+    specs: {
+      manHinh: 'HDR Oled 6.31"',
+      chip: "Snapdragon 8 Elite",
+      boNho: "512GB / 1TB",
+      camera: "200MP + 200MP + 50MP / trước 50MP",
+      pin: "7006mAh / sạc 120W",
+      heDieuHanh: "MagicOS 10 & Android 16",
+    },
+  },
+
+   {
+    id: "honor-robot-phone",
+    name: "Honor Robot Phone",
+    brand: "Honor",
+    price: "25.490.000₫",
+    image: "/images/other/honor/honor-robot-phone.jpg",
+    variants: [
+      { storage: "12/512GB", price: "25.490.000₫" },
+      { storage: "16/1TB", price: "29.490.000₫" },
+    ],
+    specs: {
+      manHinh: 'HDR Oled 6.31"',
+      chip: "Snapdragon 8 Elite",
+      boNho: "512GB / 1TB",
+      camera: "200MP + 200MP + 50MP / trước 50MP",
+      pin: "7006mAh / sạc 120W",
+      heDieuHanh: "MagicOS 10 & Android 16",
+    },
+  },
+
   {
     id: "honor-robot-phone",
     name: "Honor Robot Phone",
