@@ -21,7 +21,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   // Hàm style cho link điều hướng
-  const navLinkClass = (path: string) =>
+  const navLinkClass = (_path: string) =>
     "block rounded-xl px-3 py-2 text-sm font-semibold transition-colors hover:bg-black/5 dark:hover:bg-white/10 text-gray-800 dark:text-gray-200";
 
   return (
@@ -35,13 +35,13 @@ export default function Header() {
             className="flex items-center gap-2.5 transition-transform active:scale-95"
             title="Trở về Trang chủ Thanh Wind"
           >
-            <div className="relative h-9 w-9 overflow-hidden rounded-full border border-black/10 dark:border-white/20">
+            <div className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border border-black/10 dark:border-white/20">
               <Image
                 src="/images/logo.png"
                 alt="Thanh Wind Official Logo"
-                fill
-                sizes="36px"
-                className="object-cover"
+                width={36}
+                height={36}
+                className="h-full w-full object-cover"
                 priority
               />
             </div>
@@ -65,6 +65,7 @@ export default function Header() {
             {/* Dropdown Danh mục Khác */}
             <div className="group relative">
               <button
+                type="button"
                 className={`${navLinkClass("/khac")} flex items-center gap-1`}
               >
                 <span>Khác</span>
@@ -90,6 +91,7 @@ export default function Header() {
           {/* --- NÚT TÌM KIẾM, THEME TOGGLE & MENU MOBILE --- */}
           <div className="flex items-center gap-2">
             <button
+              type="button"
               onClick={() => setSearchOpen(true)}
               className="rounded-xl p-2 text-gray-700 transition-colors hover:bg-black/5 dark:text-gray-300 dark:hover:bg-white/10"
               aria-label="Tìm kiếm"
@@ -100,6 +102,7 @@ export default function Header() {
             <ThemeToggle />
 
             <button
+              type="button"
               onClick={() => setMobileOpen(true)}
               className="rounded-xl p-2 text-gray-700 transition-colors hover:bg-black/5 md:hidden dark:text-gray-300 dark:hover:bg-white/10"
               aria-label="Mở menu"
