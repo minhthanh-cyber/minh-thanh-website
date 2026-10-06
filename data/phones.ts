@@ -998,6 +998,64 @@ export const phones: Phone[] = [
   // HUAWEI
   // ========================================
   {
+    id: "huawei-mate-90-pro",
+    name: "Huawei Mate 90 Pro",
+    brand: "Huawei",
+    price: "22.990.000₫",
+    image: "/images/other/huawei/huawei-phones-mate90-pro.jpg",
+    variants: [
+      { storage: "16/512GB", price: "22.990.000₫" },
+      { storage: "16/1TB", price: "26.990.000₫" },
+    ],
+    specs: {
+      manHinh: 'LTPO OLED 6.75" / 1-120Hz',
+      chip: "Kirin — Huawei không công bố chi tiết trên trang thông số",
+      boNho: "512GB / 1TB",
+      camera: "50MP + 40MP + 48MP / trước 13MP",
+      pin: "5750mAh / sạc 100W",
+      heDieuHanh: "EMUI 15.0",
+    },
+  },
+  {
+    id: "huawei-mate-90-pro-max",
+    name: "Huawei Mate 90 Pro Max",
+    brand: "Huawei",
+    price: "22.990.000₫",
+    image: "/images/other/huawei/huawei-phones-mate90-pro-max.jpg",
+    variants: [
+      { storage: "16/512GB", price: "22.990.000₫" },
+      { storage: "16/1TB", price: "26.990.000₫" },
+    ],
+    specs: {
+      manHinh: 'LTPO OLED 6.75" / 1-120Hz',
+      chip: "Kirin — Huawei không công bố chi tiết trên trang thông số",
+      boNho: "512GB / 1TB",
+      camera: "50MP + 40MP + 48MP / trước 13MP",
+      pin: "5750mAh / sạc 100W",
+      heDieuHanh: "EMUI 15.0",
+    },
+  },
+  {
+    id: "huawei-mate-90-pro-max-rs-bat-thay-phi-thuong",
+    name: "Huawei Mate 90 Pro Max RS Bậc Thầy Phi Thường",
+    brand: "Huawei",
+    price: "22.990.000₫",
+    image: "/images/other/huawei/huawei-phones-mate-90-pro-max-rs-edition.jpg",
+    variants: [
+      { storage: "16/512GB", price: "22.990.000₫" },
+      { storage: "16/1TB", price: "26.990.000₫" },
+    ],
+    specs: {
+      manHinh: 'LTPO OLED 6.75" / 1-120Hz',
+      chip: "Kirin — Huawei không công bố chi tiết trên trang thông số",
+      boNho: "512GB / 1TB",
+      camera: "50MP + 40MP + 48MP / trước 13MP",
+      pin: "5750mAh / sạc 100W",
+      heDieuHanh: "EMUI 15.0",
+    },
+  },
+
+  {
     id: "huawei-mate-80-pro",
     name: "Huawei Mate 80 Pro",
     brand: "Huawei",
@@ -1016,6 +1074,7 @@ export const phones: Phone[] = [
       heDieuHanh: "EMUI 15.0",
     },
   },
+
   {
     id: "huawei-pura-90s-pro-max",
     name: "Huawei Pura 90S Pro Max",
