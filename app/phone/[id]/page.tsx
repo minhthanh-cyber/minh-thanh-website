@@ -3,6 +3,7 @@
 import { useState, use } from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { phones, PhoneVariant } from "@/data/phones";
 
 export default function PhoneDetailPage({
@@ -24,6 +25,7 @@ export default function PhoneDetailPage({
   );
 
   const displayPrice = selectedVariant ? selectedVariant.price : phone.price;
+  const displayStorage = selectedVariant ? selectedVariant.storage : phone.specs.boNho;
 
   return (
     <main className="container mx-auto max-w-5xl px-4 py-10">
@@ -31,18 +33,21 @@ export default function PhoneDetailPage({
       <div className="mb-6">
         <Link
           href="/"
-          className="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition"
+          className="inline-flex items-center gap-1 text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition"
         >
           ← Quay lại danh sách
         </Link>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-        {/* Ảnh sản phẩm */}
-        <div className="flex justify-center items-center bg-gray-50 dark:bg-gray-800/40 p-8 rounded-3xl border border-gray-100 dark:border-gray-700/60 shadow-sm">
-          <img
+        {/* Ảnh sản phẩm (Dùng Next Image tối ưu tốc độ) */}
+        <div className="relative flex justify-center items-center bg-gray-50 dark:bg-gray-800/40 p-8 rounded-3xl border border-gray-100 dark:border-gray-700/60 shadow-sm min-h-[400px]">
+          <Image
             src={phone.image}
             alt={phone.name}
+            width={400}
+            height={400}
+            priority
             className="max-h-[420px] w-auto object-contain transition duration-300 hover:scale-105"
           />
         </div>
@@ -57,7 +62,7 @@ export default function PhoneDetailPage({
           </h1>
 
           {/* Hiển thị giá */}
-          <div className="text-2xl font-bold text-red-600 dark:text-red-500 mb-6">
+          <div className="text-3xl font-black text-red-600 dark:text-red-500 mb-6">
             {displayPrice}
           </div>
 
@@ -91,7 +96,7 @@ export default function PhoneDetailPage({
             </div>
           )}
 
-          {/* BẢNG THÔNG SỐ KỸ THUẬT (ĐÃ XÓA MỤC RAM) */}
+          {/* BẢNG THÔNG SỐ KỸ THUẬT */}
           <div className="overflow-hidden rounded-2xl border border-gray-100 dark:border-gray-700/80 bg-white dark:bg-gray-800/50 shadow-sm">
             <div className="p-4 bg-gray-50 dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700/80 font-bold text-gray-900 dark:text-white text-sm">
               Thông số kỹ thuật
@@ -107,7 +112,7 @@ export default function PhoneDetailPage({
               </div>
               <div className="flex py-3 px-4">
                 <span className="w-1/3 text-gray-500 dark:text-gray-400">Bộ nhớ</span>
-                <span className="w-2/3 font-medium text-gray-900 dark:text-white">{phone.specs.boNho}</span>
+                <span className="w-2/3 font-medium text-gray-900 dark:text-white">{displayStorage}</span>
               </div>
               <div className="flex py-3 px-4">
                 <span className="w-1/3 text-gray-500 dark:text-gray-400">Camera</span>
