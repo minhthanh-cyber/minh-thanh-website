@@ -1002,7 +1002,7 @@ export const phones: Phone[] = [
     name: "Huawei Mate 90 Pro",
     brand: "Huawei",
     price: "27.390.000₫",
-    image: "/images/other/huawei/huawei-mate90-pro.jpg",
+    image: "/images/other/huawei/huawei-mate-90-pro.jpg",
     variants: [
       { storage: "12/256GB", price: "27.390.000₫" },
       { storage: "12/512GB", price: "26.990.000₫" },
@@ -1023,7 +1023,7 @@ export const phones: Phone[] = [
     name: "Huawei Mate 90 Pro Max",
     brand: "Huawei",
     price: "22.990.000₫",
-    image: "/images/other/huawei/huawei-mate90-pro-max.jpg",
+    image: "/images/other/huawei/huawei-mate-90-pro-max.jpg",
    variants: [
       { storage: "12/512GB", price: "27.390.000₫" },
       { storage: "16/512GB", price: "26.990.000₫" },
