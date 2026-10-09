@@ -1,58 +1,30 @@
-"use client";
+'use client';
+import Link from 'next/link';
+import { ALL_BRANDS, MAIN_BRANDS, KHAC_BRANDS } from '@/data/brands';
 
-import Link from "next/link";
-import { KHAC_BRANDS, MAIN_BRANDS } from "@/data/brands";
-
-interface MobileMenuProps {
-  open: boolean;
-  onClose: () => void;
-}
-
-export default function MobileMenu({ open, onClose }: MobileMenuProps) {
+export default function MobileMenu({ open, onClose }: { open:boolean; onClose:()=>void }) {
   return (
-    <div
-      className={`fixed inset-x-0 bottom-0 top-[68px] z-40 flex flex-col gap-1 overflow-y-auto border-t border-black/[0.08] bg-white/70 px-6 py-5 backdrop-blur-2xl backdrop-saturate-150 transition-all duration-200 dark:border-white/10 dark:bg-[#2B2B2B]/70 md:hidden ${
-        open
-          ? "pointer-events-auto translate-y-0 opacity-100"
-          : "pointer-events-none -translate-y-2 opacity-0"
-      }`}
-    >
-      <Link
-        href="/"
-        onClick={onClose}
-        className="border-b border-black/10 py-3.5 text-[17px] font-semibold dark:border-white/10"
-      >
-        Trang chủ
-      </Link>
-      {MAIN_BRANDS.map((b) => (
-        <Link
-          key={b.slug}
-          href={`/${b.slug}`}
-          onClick={onClose}
-          className="border-b border-black/10 py-3.5 text-[17px] font-semibold dark:border-white/10"
-        >
-          {b.label}
-        </Link>
-      ))}
-      <Link
-        href="/khac"
-        onClick={onClose}
-        className="border-b border-black/10 py-3.5 text-[17px] font-semibold dark:border-white/10"
-      >
-        Khác
-      </Link>
-      <div className="flex flex-col pl-3">
-        {KHAC_BRANDS.map((b) => (
-          <Link
-            key={b.slug}
-            href={`/khac/${b.slug}`}
-            onClick={onClose}
-            className="py-2.5 text-[15px] font-medium text-black/60 dark:text-white/60"
-          >
-            {b.label}
-          </Link>
-        ))}
-      </div>
+    <div className={`fixed inset-0 z-50 md:hidden ${open ? '' : 'pointer-events-none'}`}>
+      <div className={`absolute inset-0 bg-black/40 transition ${open ? 'opacity-100' : 'opacity-0'}`} onClick={onClose} />
+      <aside className={`absolute left-0 top-0 h-full w-[88vw] max-w-[390px] liquid-card rounded-none rounded-r-[28px] border-l-0 p-5 transition duration-300 ${open ? 'translate-x-0' : '-translate-x-full'}`}>
+        <div className="mb-5 flex items-center justify-between">
+          <div>
+            <div className="text-xs font-black uppercase tracking-[0.3em] text-red-500">Thanh Wind</div>
+            <div className="text-lg font-black">Phone Hub</div>
+          </div>
+          <button onClick={onClose} className="liquid-button h-11 w-11 p-0 text-lg font-black">×</button>
+        </div>
+        <nav className="space-y-2">
+          <Link href="/" onClick={onClose} className="tw-mobile-nav mobile-nav-item">Trang Chủ</Link>
+          {MAIN_BRANDS.map((b)=><Link key={b.slug} href={`/${b.slug}`} onClick={onClose} className="tw-mobile-nav mobile-nav-item">{b.label}</Link>)}
+          <Link href="/khac" onClick={onClose} className="tw-mobile-nav mobile-nav-item">Các Hãng Khác</Link>
+          <div className="rounded-[22px] border border-white/15 bg-white/35 p-3 dark:bg-white/5">
+            <div className="mb-2 text-xs font-black uppercase tracking-[0.18em] text-slate-500 dark:text-white/45">Khác</div>
+            <div className="grid grid-cols-2 gap-2">{KHAC_BRANDS.map((b)=><Link key={b.slug} href={`/khac/${b.slug}`} onClick={onClose} className="rounded-2xl border border-white/15 bg-white/55 px-3 py-2 text-sm font-semibold dark:bg-white/5">{b.label}</Link>)}</div>
+          </div>
+          <div className="rounded-[22px] border border-white/15 bg-white/35 p-3 text-xs text-slate-600 dark:bg-white/5 dark:text-white/60">{ALL_BRANDS.length} thương hiệu đang có trong catalog. Admin có thể thêm thiết bị mới trong Thanh Wind Admin.</div>
+        </nav>
+      </aside>
     </div>
   );
 }
