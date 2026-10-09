@@ -1,36 +1,9 @@
-"use client";
+'use client';
+import { useEffect, useState } from 'react';
 
-import { useState } from "react";
-import { DeviceIcon } from "./icons";
-
-interface PhoneImageProps {
-  src: string;
-  alt: string;
-}
-
-/**
- * Hiển thị ảnh thiết bị từ /public/images/...
- * Nếu ảnh chưa được thêm vào (giai đoạn dữ liệu mẫu), tự động hiện icon
- * placeholder thay vì để trình duyệt hiện ảnh vỡ.
- */
-export default function PhoneImage({ src, alt }: PhoneImageProps) {
-  const [failed, setFailed] = useState(false);
-
-  if (failed) {
-    return (
-      <div className="flex h-full w-full items-center justify-center text-black/25 dark:text-white/25">
-        <DeviceIcon className="h-1/2 w-1/2" />
-      </div>
-    );
-  }
-
-  // eslint-disable-next-line @next/next/no-img-element
-  return (
-    <img
-      src={src}
-      alt={alt}
-      className="h-full w-full object-cover"
-      onError={() => setFailed(true)}
-    />
-  );
+export default function PhoneImage({src,alt,priority=false}:{src:string;alt:string;priority?:boolean}){
+ const [failed,setFailed]=useState(false);
+ useEffect(()=>setFailed(false),[src]);
+ const image=failed||!src?'/images/logo.png':src;
+ return <img src={image} alt={alt} loading={priority?'eager':'lazy'} decoding="async" onError={()=>{if(!failed)setFailed(true)}} className="h-full w-full object-contain"/>;
 }

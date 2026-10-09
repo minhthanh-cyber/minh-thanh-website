@@ -1,28 +1,17 @@
-import type { BrandKey } from "@/data/phones";
-import { phones } from "@/data/phones";
-import PhoneGrid from "./PhoneGrid";
+import type { BrandKey } from '@/lib/types';
+import { getPhones } from '@/lib/store';
+import PhoneGrid from './PhoneGrid';
 
-/**
- * Nội dung dùng chung cho các trang theo hãng chính: /iphone, /samsung, /xiaomi.
- * Mỗi route chỉ cần gọi component này với brand + label tương ứng,
- * tránh lặp lại JSX ở từng page.
- */
-export default function BrandPage({
-  brand,
-  label,
-}: {
-  brand: BrandKey;
-  label: string;
-}) {
-  const list = phones.filter((p) => p.brand === brand);
-
+export default async function BrandPage({ brand, label }: { brand: BrandKey; label: string }) {
+  const list = (await getPhones()).filter((p) => p.brand === brand);
   return (
-    <section className="pb-16 pt-10">
-      <div className="mb-6 flex items-baseline justify-between">
-        <h1 className="text-2xl font-bold tracking-tight">{label}</h1>
-        <span className="text-[13.5px] font-semibold text-black/50 dark:text-white/50">
-          {list.length} thiết bị
-        </span>
+    <section className="space-y-5 py-8">
+      <div className="liquid-card p-6">
+        <div className="text-xs font-black uppercase tracking-[0.24em] text-red-500">Thanh Wind</div>
+        <div className="mt-2 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+          <h1 className="text-3xl font-black text-slate-900 dark:text-white">{label}</h1>
+          <div className="text-sm text-slate-500 dark:text-white/55">{list.length} thiết bị</div>
+        </div>
       </div>
       <PhoneGrid phones={list} />
     </section>

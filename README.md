@@ -1,83 +1,28 @@
-# Minh Thanh — Website tham khảo thiết bị công nghệ
+# Thanh Wind — Phone Hub (Liquid Glass + Admin)
 
-Website Next.js (App Router) + TypeScript + Tailwind CSS, hiển thị giá bán,
-thông số kỹ thuật và hình ảnh điện thoại để người dùng tham khảo.
+**Đây là bộ source đã gộp từ ZIP ThanhWind-HienTai.zip với bản Liquid Glass 238 tùy chỉnh.**
 
-## Công nghệ
+- Giữ nguyên **53 sản phẩm và 75 ảnh gốc** từ source người dùng cung cấp.
+- Giao diện Liquid Glass và tối ưu mobile/desktop.
+- Admin riêng tại `/ThanhWindAdmin`, không có link công khai trên trang chủ.
+- Quản lý điện thoại và giá theo từng phiên bản RAM/ROM/màu/SKU/tồn kho, tải ảnh.
+- Thanh Wind AI dùng OpenRouter; dữ liệu Admin lưu bằng Upstash Redis.
+- 238 tùy chỉnh giao diện trong 17 nhóm (không phải 238 chức năng backend).
 
-- Next.js 15 (App Router)
-- React 19
-- TypeScript
-- Tailwind CSS
+**Đọc file [`README_GOP_SOURCE_VSCODE.md`](README_GOP_SOURCE_VSCODE.md) trước khi đưa vào dự án VS Code cũ.** Bên trong có script `APPLY_TO_EXISTING_PROJECT.ps1` để chèn source an toàn lên nhánh `upgrade-liquid-glass-admin` mà không ghi đè `data/phones.ts` và `public/images`.
 
-## Cài đặt & chạy thử
+## Chạy local
 
 ```bash
 npm install
+npm run build
 npm run dev
 ```
 
-Sau đó mở [http://localhost:3000](http://localhost:3000).
+Mở http://localhost:3000 và `/ThanhWindAdmin`. Nhập key tại Vercel Environment Variables; không ghi key vào repository. Nếu chưa có Redis, thao tác thêm/sửa/xóa trên Admin sẽ bị từ chối để tránh thông báo lưu giả.
 
-Build production để kiểm tra lỗi:
+## Triển khai
 
-```bash
-npm run build
-```
+Vercel framework `Next.js`, Node.js 22.x, Output Directory mặc định. Không dùng `output: 'export'`. Sau khi push và tạo Pull Request, kiểm tra Preview trước rồi mới merge vào nhánh Production `main`.
 
-## Cấu trúc thư mục
-
-```
-app/            Các route (App Router)
-components/     Component dùng chung (Header, Search, PhoneCard, ...)
-data/           Dữ liệu điện thoại + danh sách hãng (phones.ts, brands.ts)
-public/images/  Nơi đặt ảnh thiết bị thật
-```
-
-## Route hiện có
-
-| Đường dẫn        | Nội dung                         |
-| ----------------- | --------------------------------- |
-| `/`                | Trang chủ                         |
-| `/iphone`          | Danh sách iPhone                  |
-| `/samsung`         | Danh sách Samsung                 |
-| `/xiaomi`          | Danh sách Xiaomi                  |
-| `/khac`            | Danh mục Vivo / OPPO / Honor / Huawei |
-| `/khac/[brand]`    | Danh sách theo từng hãng trong "Khác" |
-| `/search`          | Trang tìm kiếm                    |
-| `/phone/[id]`      | Trang chi tiết một thiết bị        |
-
-## Thêm điện thoại mới
-
-Mở `data/phones.ts` và thêm một object vào mảng `phones`. Không cần sửa bất kỳ
-component hay trang nào — card, trang danh sách, trang chi tiết, và tìm kiếm
-đều tự động cập nhật.
-
-## Thêm ảnh thật
-
-Ảnh hiện đang dùng đường dẫn dạng `/images/<hãng>/<ten-file>.jpg` nhưng file
-ảnh thật **chưa được đính kèm** (đây là dữ liệu mẫu). Đặt ảnh vào đúng thư mục
-tương ứng trong `public/images/`, đúng tên file được khai báo trong
-`data/phones.ts` — ảnh sẽ tự hiển thị. Nếu ảnh chưa tồn tại, giao diện sẽ tự
-hiện icon thiết bị thay thế (xem `components/PhoneImage.tsx`), không bị vỡ ảnh.
-
-```
-public/images/iphone/
-public/images/samsung/
-public/images/xiaomi/
-public/images/other/vivo/
-public/images/other/oppo/
-public/images/other/honor/
-public/images/other/huawei/
-```
-
-## Theme sáng / tối
-
-Nút bật/tắt trên Header lưu lựa chọn vào `localStorage` (khoá `mt-theme`) và
-áp class `dark` lên thẻ `<html>` — Tailwind `darkMode: "class"` xử lý phần còn
-lại (`tailwind.config.ts`).
-
-## Phạm vi giai đoạn 1
-
-Chưa bao gồm: đăng nhập/đăng ký, Admin, database, API phức tạp, bình luận,
-tin tức, sự kiện, giỏ hàng, thanh toán — theo đúng phạm vi đã thống nhất.
+**Kiểm thử tại đây**: cú pháp 38 TS/TSX không lỗi, 59 đường import nội bộ hợp lệ, CSS parse được, 238 cấu hình hợp lệ, 53 đường ảnh sản phẩm đều tồn tại. Chưa chạy được build Next.js trọn vẹn do npm cache trong môi trường kiểm thử thiếu dependency. Cần chạy `npm run build` trên máy trước khi merge production.
