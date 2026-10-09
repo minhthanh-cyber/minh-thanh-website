@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "MINH THANH — Tham khảo thiết bị công nghệ",
   description:
     "Minh Thanh tổng hợp giá bán, cấu hình và thông số của các dòng điện thoại phổ biến tại Việt Nam.",
+  icons: {
+    icon: "/images/icon.png", // Trỏ trực tiếp tới file icon.png trong public/images
+  },
 };
 
 export default function RootLayout({
